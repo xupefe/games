@@ -1,0 +1,90 @@
+/* 基本样式 */
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* 响应式布局 */
+@media (max-width: 576px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+  .card img {
+    height: 150px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  .card img {
+    height: 180px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-size: 1.3rem;
+  }
+  .card-text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .card {
+    margin-bottom: 2rem;
+  }
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-size: 1.4rem;
+  }
+  .card-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    margin-bottom: 2.5rem;
+  }
+  .card img {
+    height: 250px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .card-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* 智能手表适配 */
+@media (max-width: 320px) {
+  .card {
+    margin-bottom: 0.5rem;
+  }
+  .card img {
+    height: 100px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .card-text {
+    font-size: 0.8rem;
+  }
+}
