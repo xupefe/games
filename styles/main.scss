@@ -1,0 +1,52 @@
+// 动态对比度系统
+@function adaptive-contrast($base) {
+  @return if(lightness($base) > 60%, 
+    darken($base, 35%), 
+    lighten($base, 35%));
+}
+
+// 流体网格架构
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  container-type: inline-size;
+}
+
+@container (width < 500px) {
+  .game-card { 
+    grid-column: span 2; 
+  }
+}
+
+// 英雄展示模式
+.hero-game {
+  aspect-ratio: 21/9;
+  background: radial-gradient(circle at 75% 50%, 
+    rgba(0,0,0,0.7) 30%, transparent 70%);
+}
+
+// 黄金比例网格
+.golden-column {
+  width: calc(100%*(1 - 0.618));
+  margin-right: calc(100%*0.618 - (100%*(1 - 0.618)));
+}
+
+// 硬件加速效果
+.game-card {
+  transform: translateZ(0);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+// 分层合成
+.dynamic-content {
+  will-change: transform;
+  contain: strict;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+}
